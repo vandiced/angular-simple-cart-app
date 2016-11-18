@@ -27,7 +27,7 @@ var CartComponent = (function () {
             this.cart = this.cart.splice(1, 1);
             console.log(this.cart);
         }
-        localStorage.cartItems = JSON.stringify(this.cart);
+        //localStorage.cartItems = JSON.stringify(this.cart);
         //console.log(this.cart);
     };
     ;

@@ -40,7 +40,6 @@ var MyShopComponent = (function () {
         // add movie to cart ony if it is not already in cart
         if (!this.cart.includes(movie)) {
             this.cart.push(movie);
-            localStorage.cartItems = JSON.stringify(this.cart);
         }
         else {
         }
