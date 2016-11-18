@@ -1,0 +1,46 @@
+<h1 class="header">Welcome to MovieShop</h1>
+<!--<my-movies></my-movies>-->
+<!--<div *ngIf="premiumAccount == true">You are not eligible for this movie.</div>-->
+
+<div class="main-container">
+
+	<h3>We have the following movies available</h3>
+
+	<div class="movie-items-container">
+		<div class="movie-item {{ movie.name.split(' ').join('').toLowerCase() }}" *ngFor="let movie of movieList; let i = index;"
+				(click)="selectedMovie(movie.name)">
+			<span class="movie-name">{{movie.name}}</span>
+		</div>
+
+		<!--<ul>
+			<li 
+				*ngFor="let movie of movieList; let i = index;"
+				(click)="selectedMovie(movie)"
+			>{{i+1}}. {{movie}}</li>
+		</ul>-->
+
+		<div class="clear"></div>
+		
+	</div>
+
+	<!--Recently added movie: {{recentMovie}}<br><br>-->
+
+	<div class="cart-container">
+		<h3>Cart</h3>
+		<ul>
+			<li *ngFor="let item of cart;">
+				{{item}}
+			</li>
+		</ul>
+	</div>
+
+
+
+
+
+	<!--<p *ngFor="let movie of movieList; let i = index;">{{i+1}}. {{movie}}</p>-->
+
+	<button (click)="mouseClickedMe(movie)">I was clicked {{times}} times.</button>
+
+</div>
+

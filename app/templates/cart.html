@@ -1,0 +1,18 @@
+<!--Recently added movie: {{recentMovie}}<br><br>-->
+
+<div class="cart-container">
+	<h3>Cart</h3>
+	<ul>
+		<li *ngFor="let item of cart;">
+			{{item}} <span class="remove-from-cart" (click)="removeFromCart(item)">remove</span>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+<!--<p *ngFor="let movie of movieList; let i = index;">{{i+1}}. {{movie}}</p>-->
+
+<button (click)="mouseClickedMe(movie)">I was clicked {{times}} times.</button>

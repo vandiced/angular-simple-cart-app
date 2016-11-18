@@ -1,0 +1,24 @@
+<!--<my-movies></my-movies>-->
+<!--<div *ngIf="premiumAccount == true">You are not eligible for this movie.</div>-->
+
+
+<h3>We have the following movies available</h3>
+
+<div class="movie-items-container">
+	<div class="movie-item {{ movie.name.split(' ').join('').toLowerCase() }}" *ngFor="let movie of movieList; let i = index;"
+			(click)="selectedMovie(movie.name)">
+		<span class="movie-name">{{movie.name}}</span>
+	</div>
+
+	<!--<ul>
+		<li 
+			*ngFor="let movie of movieList; let i = index;"
+			(click)="selectedMovie(movie)"
+		>{{i+1}}. {{movie}}</li>
+	</ul>-->
+
+	<div class="clear"></div>
+	
+</div>
+
+
