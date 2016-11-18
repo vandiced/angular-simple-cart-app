@@ -32,10 +32,12 @@ export class MyShopComponent {
 	selectedMovie(movie) {
 		this.recentMovie = movie;
 
+		//console.log(localStorage);
+
 		// add movie to cart ony if it is not already in cart
 		if (!this.cart.includes(movie)) {
 			this.cart.push(movie);
-			//localStorage.cartItems = JSON.stringify(this.cart);
+			localStorage.setItem('cartItems', JSON.stringify(this.cart));
 			//alert(movie + ' movie added to cart');
 		} else {
 			//alert(movie + ' already in cart');

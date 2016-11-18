@@ -23,7 +23,7 @@ export class CartComponent {
 		    console.log(this.cart);
 		}
 
-		//localStorage.cartItems = JSON.stringify(this.cart);
+		localStorage.setItem('cartItems', JSON.stringify(this.cart));
 		//console.log(this.cart);
 	};
 }

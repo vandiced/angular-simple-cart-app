@@ -37,9 +37,11 @@ var MyShopComponent = (function () {
     ;
     MyShopComponent.prototype.selectedMovie = function (movie) {
         this.recentMovie = movie;
+        //console.log(localStorage);
         // add movie to cart ony if it is not already in cart
         if (!this.cart.includes(movie)) {
             this.cart.push(movie);
+            localStorage.setItem('cartItems', JSON.stringify(this.cart));
         }
         else {
         }
